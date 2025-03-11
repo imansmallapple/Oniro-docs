@@ -1,6 +1,8 @@
 # Oniro Documentation Structure Proposal
 
-current action is to fill the content from different sources, we will investigate and m
+current action is to fill the content from different sources, we will investigate and modity it later
+
+Text from: (https://oniroproject.readthedocs.io/en/latest/overview/oniroproject-vision.html) has a lot of content can't be reused
 
 Short todo summary:
 - Verify source using LICENSE `CC BY 4.0`  -> [Here](https://creativecommons.org/licenses/by/4.0/)
@@ -23,46 +25,13 @@ No additional restrictions — You may not apply legal terms or technological me
 ### What is Oniro?  
 
 Oniro is an open-source, vendor-neutral Operating System (OS) managed by the Eclipse Foundation. It is built upon the foundational layers of OpenHarmony, an open-source project incubated and operated by the OpenAtom Foundation. OpenHarmony is known for its distributed OS features that cater to a wide range of smart devices, regardless of their size. Oniro extends OpenHarmony code base with add-ons for the European and Global markets, such as ReactNative support, Eclipse Theia based IDE, Servo web engine, and more that are coming.  
+
 Text from: (https://docs.oniroproject.org/)  
 
-### Oniro Vision and Aims  
-#### System Positioning    
+### Oniro Core  
+At its core, Oniro prioritizes seamless interoperability, modularization, and a visually appealing user interface. These priorities are realized through an array of enhancements, encompassing application frameworks like React Native, system-level OS components such as Servo Web Engine, and a comprehensive toolchain that ensures intellectual property compliance and licensing. This adaptable platform provides robust support for a broad range of global technologies and applications spanning various industries, including Consumer Electronics, Home Appliances, Industrial IoT devices, Smart Home, and Multimedia.
 
-Oniro Project is an ambitious rethink on how an open source collaborative operating system can be run across a variety of device classes - from small microcontrollers with kilobytes of memory to powerful CPUs driving a phone, laptop or even a data center. The goal of Oniro Project is to evolve a set of builtin system capabilities on top of commodity open source kernels that allows sharing of resources and collaboration across distributed devices of various classes.
-
-The development of these capabilities will happen through an open community project along with other interested parties.
-
-For an end-user, Oniro Project will integrate the multiple, standalone smart devices owned by the user and allow for fast interconnection, capability collaboration, and resource sharing between them. This way, the individual devices can collaborate to provide better context-aware services than if they were operating independently of each other.
-
-For an application developer, Oniro Project will integrate distributed technologies to ease application development across different device classes. Developers will be able to focus on upper-layer service logic and develop richer, collaborative applications more easily.
-
-For device developers, Oniro Project will provide reference software blueprints for the key product verticals that will allow them to focus their time on tailoring the OS to their device’s resource capabilities and service characteristics. These software blueprints will provide best-in-class practices and solutions to keep the devices secure out-of-the-box.
-
-Oniro Project will support APIs in multiple programming languages depending on the constraints of the underlying hardware. Developers will be able to choose from Java, Extensible Markup Language (XML), C/C++, JavaScript (JS), Cascading Style Sheets (CSS), and HarmonyOS Markup Language (HML) to develop applications for Oniro Project.  
-
-#### OpenHarmony Compatibility  
-Oniro Project will be OpenHarmony compatible. It will include the services and frameworks required by OpenHarmony specification, and provide the APIs required by OpenHarmony specification, so that you can develop products that can interoperate with other OpenHarmony products and be certified as OpenHarmony compatible.
-
-OpenHarmony compatibility will enable required OpenHarmony features in the kernel layer, system services layer and framework layer, allowing the addition of OpenHarmony compatible applications.
-
-Due to the inherent modularity of the Oniro build system (OpenEmbedded), individual projects will be able to pick and choose from the OpenHarmony compatibility features, allowing to build products with just the parts that are needed.
-
-#### Technical Architecture
-Oniro Project has a layered architecture built around the Yocto Project and bitbake build system. The Yocto Project is very popular in the embedded Linux community and provides an excellent platform for developing a highly-customizable, cross-kernel operating system. From bottom to top, Oniro Project consists of the kernel layer, system services layer, framework layer, and application layer. In multi-device development, Yocto provides the capabilities to tweak layers and recipes to remove unnecessary subsystems, functions, or modules as required.
-
-| Layer                  | Aim         |
-| -----------            | ----------- |
-| Kernal Layer           | Oniro Project will support a multi-kernel design out of the box (Linux kernel and an RTOS such as Zephyr RTOS or LiteOS) so that appropriate OS kernels can be selected for devices with different resource limitations. Over time, a kernel abstraction layer (KAL) will shield differences in kernel implementations and provide the upper layer with basic kernel capabilities, including process and thread management, memory management, file system, network management, and peripheral management.       |
-| System Services layer  | The System Services Layer will contain the bulk of the differentiating features of Oniro Project. It will provide a complete set of capabilities essential for Oniro Project to offer services for applications through the framework layer. The system services layer will add the following features over time:<br>• The protocols and primitives that allow devices to discover each other<br>• APIs to allow sharing of computing, storage and other resources<br>• APIs that allow applications to be more context-aware due to collaboration with other devices in the network<br>• APIs to allow applications to expose business logic as abilities that may be integrated into other applications or even used on other devices in the network        |
-| Framework Layer        | The Framework layer will provide an SDK to develop Oniro Project applications in multiple languages such as Java, C, C++, and JS depending on the target device class and its HW constraints.        |
-| Application Layer      | When completed, the Application layer will host the system and third-party applications. Oniro Project applications will be able to use APIs to expose business logic as abilities that may be utilized inside other applications, thus allowing creation of more integrated experiences on the same device as well as distributed across devices.        |
-
-
-
-
-Text from: (https://oniroproject.readthedocs.io/en/latest/overview/oniroproject-vision.html)
-
-Source from `Oniro Docs`, this part I think we can reuse our original `Oniro docs`
+Text from: (https://oniroproject.org/)
 
 ## [Operating System Architecture](https://docs.openharmony.cn/pages/v4.1/en/OpenHarmony-Overview.md)
 ### Architecture  
@@ -140,40 +109,24 @@ This documentation is designed to guide developers through the process of creati
 
 Text from (https://github.com/frankplus/oh-app-development-docs/tree/master)
 
-- Overview of application development
+- [Overview of application development](/application_development/app_dev_overview.md)
+
+Text from (https://github.com/eclipse-oniro-mirrors/docs/blob/OpenHarmony-4.1-Release/en/application-dev/application-dev-guide-for-gitee.md)
+
+Text from (https://github.com/eclipse-oniro-mirrors/docs/blob/OpenHarmony-4.1-Release/en/application-dev/quick-start/start-overview.md)
+
 - Key concept and terminology
 
-### [Development Environment](https://github.com/frankplus/oh-app-development-docs/blob/master/Chapter_3/Dev%20Enviroment%20Setup%20Guide.md)  
-As the saying goes, *"If you want to do well, you must first sharpen your tools."* To develop OpenHarmony applications, you need to complete some preparations to ensure that the necessary DevEco Studio development tool, that is, the one-stop integrated development environment (IDE) of OpenHarmony, is ready.
+### [Development Environment](/application_development/environment_setup.md)  
 
-The following describes how to download, install, and configure the development environment by taking the DevEco Studio tool installed in Windows as an example.
-
-#### System requirement
-To ensure the proper running of DevEco Studio, it is recommended that the Windows PC meet the following requirements:
-
-- Operating system: Windows 10 64-bit
-
-- Memory: 8 GB or above
-
-- Hard disk: 100 GB or above
-
-- Resolution: 1280 x 800 pixels or higher
-
-#### IDE Installation  
-- Download **DevEco Studio**  
-On the HarmonyOS [release notes](https://docs.openharmony.cn/pages/v4.1/zh-cn/release-notes/OpenHarmony-v4.1-release.md) (Chinese -- you would need a translator), you can download DevEco studio 4.1 from the following link:  
-<https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_package_901_9/ee/v3/HqJ-6O2FQny86xtk_dg9HQ/devecostudio-windows-4.1.0.400.zip?HW-CC-KV=V1&HW-CC-Date=20240409T033730Z&HW-CC-Expire=315360000&HW-CC-Sign=BFA444BC43A041331E695AE2CFA9035A957AF107E06C97E793FD3D31D7096A0D>  
-
-**DevEco Studio** provides Windows and Mac versions. You can download DevEco Studio based on the operating system.  
-[![alt text](Images/Application-Development-Guide/image_1.png)](https://docs.openharmony.cn/pages/v4.1/zh-cn/release-notes/OpenHarmony-v4.1-release.md)  
+Text from (https://github.com/frankplus/oh-app-development-docs/blob/master/Chapter_3/Dev%20Enviroment%20Setup%20Guide.md)
 
 
-#### How to set up environment  
+### [Real device configuration](/application_development/real_device_installation.md)    
+Text from (https://github.com/imansmallapple/ArkTS-simple-demo-usage/blob/main/deveco_device_usage.md)
 
-#### [Real device configuration](https://github.com/imansmallapple/ArkTS-simple-demo-usage/blob/main/deveco_device_usage.md)  
-- Install HDC  
-
-
+> **Important note:**
+Contains external source, usage to be verified, considered about usage, I left some untranslated text for now
 
 
 
