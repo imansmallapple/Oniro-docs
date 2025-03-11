@@ -1,4 +1,15 @@
 # Real Device Installation  
+
+Text from (https://github.com/imansmallapple/ArkTS-simple-demo-usage/blob/main/deveco_device_usage.md)
+
+(This source is from my repo)
+
+
+
+> **Important note:**
+Contains external source, usage to be verified, considered about usage, I left some untranslated text for now
+
+
 This guide demostrates how to run openHarmony application on real device.
 1. [Install HDC](#install-hdc)    
 2. [Using local device run application service](#using-local-device-run-application-service)  

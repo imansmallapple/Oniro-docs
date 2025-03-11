@@ -21,7 +21,7 @@ ArkUI comes with two development paradigms: ArkTS-based declarative development 
 | Declarative development paradigm  | ArkTS   | Data-driven  | Applications involving technological sophistication and teamwork| Mobile application and system application developers|
 | Web-like development paradigm   | JavaScript      | Data-driven  | Applications and service widgets with simple UIs    | Frontend web developers                       |
 
-For more details, see [UI Development](../ui/arkui-overview.md).
+For more details, see [UI Development](/application_development/quick_start/introduction-to-arkui.md).
 
 ### Application Model
 
@@ -36,12 +36,3 @@ Along its evolution, OpenHarmony has provided two application models:
 For details about the differences between the FA model and stage model, see [Interpretation of the Application Model](../application-models/application-models.md).
 
 To help you better understand the preceding basic concepts and application development process, **Getting Started** walks you through an example of building the first ArkTS application with two pages in the stage model.
-
-
-## Tool Preparation
-
-1. Download the latest version of [DevEco Studio](../../release-notes/OpenHarmony-v4.1-beta1.md#version-mapping).
-
-2. Install DevEco Studio and configure the development environment. For details, see [Setting Up the Development Environment](https://developer.harmonyos.com/en/docs/documentation/doc-guides-V3/environment_config-0000001052902427-V3).
-
-When you are done, you can set out to [build your first ArkTS application in the stage model](start-with-ets-stage.md).
