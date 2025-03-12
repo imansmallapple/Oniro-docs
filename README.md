@@ -56,10 +56,10 @@ Source from `Oniro docs`
 
 #### Developer Phone
 
-### [Quick build with Oniro](https://docs.oniroproject.org/eclipse-oniro-project/building-oniro.html)
+### [Quick build with Oniro](/device-development/quick-build-with-oniro.md)  
 Source from `Oniro docs`
 
-### [Oniro IDE](https://docs.oniroproject.org/oniro-ide/)
+### [Oniro IDE](/device-development/oniro-ide/oniro-ide.md)
 Source from `Oniro docs`
 
 ## Policies and Compliance
@@ -72,4 +72,4 @@ Source from `old oniro docs`
 - [Code of Conduct](https://oniroproject.readthedocs.io/en/latest/code-of-conduct.html)  
 - [Mailing lists](https://oniroproject.org/community)  
 - [Chat](https://chat.eclipse.org/#/room/#oniro:matrix.eclipse.org)  
-- Social media: LinkedIn, X, Mastodon(links to be added)  
+- Social media: [LinkedIn](https://www.linkedin.com/showcase/oniro-project/), [X](https://x.com/Oniro_Project), [Mastodon](https://mastodon.social/@OniroProject)  
