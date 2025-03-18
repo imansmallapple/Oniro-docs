@@ -2,16 +2,22 @@
 
 Text from (https://github.com/frankplus/oh-app-development-docs/blob/master/Chapter_3/Dev%20Enviroment%20Setup%20Guide.md)  
 
+This guide aims to help developer set up their own development environment.
+
+**Content Table:**  
 [IDE Installation](#ide-installation)  
    - [Get Package](#get-package)  
    - [Step by Step Installation](#step-by-step-installation)  
 
 [Environment Configuration](#environment-configuration)  
 
-[Full SDK Replacement](#full-sdk-replacement)  
+[Full SDK & Public SDK](#full-sdk--public-sdk)  
 
+[Developer Account](#developer-account)  
 
-This guide aims to help developer set up their own development environment.
+[Introduction to OHPM](#introduction-to-ohpm)  
+
+[Common Issues and Solutions](#common-issues-and-solutions)  
 
 # IDE Installation  
 We are using **DevEco Studio** as the IDE  
@@ -84,7 +90,7 @@ If you want to run application for OpenHarmony, you need to install revelent API
 
 There are two types of SDKs:
 
-* Public-SDK: A toolkit provided for application development. It is available for download with DevEco Studio and does not include **high-permission APIs** required for system applications.  
+* Public-SDK: A toolkit provided for application development. It is available to download with DevEco Studio and does not include **high-permission APIs** required for system applications.  
 * Full-SDK: A toolkit provided for OEM manufacturers to develop applications. It cannot be downloaded with DevEco Studio and includes **high-permission APIs** required for system applications.
 
 ## How to get the Full SDK?
@@ -95,10 +101,11 @@ There are two types of SDKs:
 
 1. Obtain the latest OpenHarmony SDK from the OpenHarmony daily build pipline [Daily Build | OpenHarmony CI](https://ci.openharmony.cn/workbench/cicd/dailybuild/dailylist). The daily build pipeline builds system images, SDKs, etc.  
    
-   User conditional filtering, such as selecting the project as openharmony, selecting the target branch OpenHarmony-4.1-Release, selecting a date from the previous month, or manually choosing a range.  
+   Use conditional filtering, such as selecting the project as openharmony, selecting the target branch OpenHarmony-4.1-Release, selecting a date from the previous month, or manually choosing a range.  
    
-   In the daily build or rolling build, find **ohos-sdk-full**, and click on the download link to choose and download the full package, which includes Full-SDK for Windows and Linux.  (If daily build SDK is not compatible with your version of DevEco Studio, try to use rolling build SDK instead)  
-![alt text](../Images/Application-Development-Guide/environment_setup/SDK-1.png)  
+   In the daily build or rolling build, find **ohos-sdk-full_4.1-Release**, and click on the download link to choose and download the full package, which includes Full-SDK for Windows and Linux.  (If daily build SDK is not compatible with your version of DevEco Studio, try to use rolling build SDK instead)  
+<img src='image-env/image19.png'>  
+ 
 
 | pipeline        | description                                                                                          | remark                                                                                                           |
 | --------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -109,28 +116,28 @@ There are two types of SDKs:
 
 2. Make sure that the downloaded SDK is the full SDK.  
    Check whether the downloaded file name contains "full-SDK."  
-   Check if the API includes system APIs such as @ohos.app.ability.abilityManager.d.ts, @ohos.app.form.formInfo.d.ts, and @ohos.bluetooth.d.ts,   
-   (check documentation for more system APIs)  
+   Check if the API includes system APIs such as `@ohos.app.ability.abilityManager.d.ts`, `@ohos.app.form.formInfo.d.ts`, and `@ohos.bluetooth.d.ts` 
 
 #### Replace the Full SDK
 
-Take the replacement of the full SDK of DevEco Studio 4.0-Beta1, API 10 on Windows OS as an example.
+Take the replacement of the full SDK of DevEco Studio 4.1, API 11 on Windows OS as an example.
 
 1. Backup and remove the local SDK:  
    Make sure to select OpenHarmony then navigate to the directory where the original SDK is installed.
-   ![alt text](../Images/Application-Development-Guide/environment_setup/SDK-2.png)  
+<img src='image-env/image20.png'>  
 
 
-Copy the entire SDK directory (e.g., 10) to another location on your system where you want to keep the backup.
+
+Copy the entire SDK directory (e.g., 11) to another location on your system where you want to keep the backup.
 
 Now you can remove the original SDK from its directory.
 
-1. The SDK you have acquired needs to be recognized by DevEco Studio in order to be used. For example, with the daily build SDK : ersion-Daily\_Version-ohos-sdk-public-20230716\_020117-ohos-sdk-public.tar.gz, the compressed file has the following directory structure. You can see that it contains SDK files for both Linux and Windows platforms. Each platform's SDK includes directories such as ets, js, native, previewer, and toolchains.
+1. The SDK you have acquired needs to be recognized by DevEco Studio in order to be used. 
+For example, with the daily build SDK: `version-Master_Version-OpenHarmony_4.1.7.7-20240830_034700-ohos-sdk-public_4.1-release.tar.gz`, the compressed file has the following directory structure. 
+You can see that it contains SDK files for both Linux and Windows platforms. Each platform's SDK includes directories such as ets, js, native, previewer, and toolchains.
+```
+   └─version-Master_Version-OpenHarmony_4.1.7.7-20240830_034700-ohos-sdk-public_4.1-Release
    
-   └─version-Daily\_Version-ohos-sdk-public-20230716\_020117-ohos-sdk-public
-   
-       │  daily\_build.log
-       
        │  manifest\_tag.xml
        
        │
@@ -139,48 +146,41 @@ Now you can remove the original SDK from its directory.
        
            ├─linux
        
-           │      ets-linux-x64-4.0.9.3-Beta2.zip
+           │      ets-linux-x64-4.1.7.8-Release
        
-           │      js-linux-x64-4.0.9.3-Beta2.zip
+           │      js-linux-x64-4.1.7.8-Release
        
-           │      native-linux-x64-4.0.9.3-Beta2.zip
+           │      native-linux-x64-4.1.7.8-Release
        
-           │      previewer-linux-x64-4.0.9.3-Beta2.zip
+           │      previewer-linux-x64-4.1.7.8-Release
        
-           │      toolchains-linux-x64-4.0.9.3-Beta2.zip
+           │      toolchains-linux-x64-4.1.7.8-Release
        
            │
        
            └─windows
        
-                   ets-windows-x64-4.0.9.3-Beta2.zip
+                   ets-windows-x64-4.1.7.8-Release
        
-                   js-windows-x64-4.0.9.3-Beta2.zip
+                   js-windows-x64-4.1.7.8-Release
        
-                   native-windows-x64-4.0.9.3-Beta2.zip
+                   native-windows-x64-4.1.7.8-Release
        
-                   previewer-windows-x64-4.0.9.3-Beta2.zip
+                   previewer-windows-x64-4.1.7.8-Release
        
-                   toolchains-windows-x64-4.0.9.3-Beta2.zip
+                   toolchains-windows-x64-4.1.7.8-Release
+```
+2. Create a new directory with the API version 11  as the file name in dir path: xxx\\Sdk\\ , unzip the compressed files  into this directory to form a structure below:
+<img src='image-env/image21.png'>  
 
-2. Create a new directory with the API version 10  as the file name in dir path: xxx\\SDK\\ , unzip the compressed files  into this directory to form a structure below:
-   ![alt text](../Images/Application-Development-Guide/environment_setup/SDK-3.png)  
-
-
-3. Install node\_modules Dependencies:  
-   Under the following two paths:  
-   xxx\\SDK\\10\\ets\\build-tools\\ets-loader  
-   xxx\\SDK\\10\\js\\build-tools\\ace-loader  
-   Open the terminal and **“npm install”** to update the missing dependencies.  
-
-4. Verify in the IDE:  
+3. Verify in the IDE:  
    Full API will be loaded in IDE and you can now rebuild the project.  
-    ![alt text](../Images/Application-Development-Guide/environment_setup/SDK-4.png)  
-
+<img src='image-env/image24.png'>  
+Full SDK replacement tutorial finished.
 
 ### **Approach 2: From Compiled Source Files**
 
-The Full-SDK is not available directly. It can be compiled from the source code of OpenHarmony and manually replaced in DevEco Studio. The method of replacing the SDK is the same as the one mentioned in **Approach 1**.
+The Full-SDK is not available directly. It can be compiled from the source code of OpenHarmony and manually replaced in DevEco Studio. The method of replacing the SDK is the same as the one mentioned in [**Approach 1**](#approach-1-from-cicd-pipeline-recommended).
 
 You can find the guide  of compilation of source code here: [How to compile Full SDK](https://gitee.com/openharmony/docs/blob/OpenHarmony-3.2-Release/zh-cn/application-dev/quick-start/full-sdk-compile-guide.md#%E7%BC%96%E8%AF%91full-sdk)
 
@@ -188,24 +188,12 @@ Please use translation tools if needed.
 
 <div style="margin-top: 50px;"></div>
 
-[Todo, this part needed to be modified, progress is here]
----------------------------------------------------------------------------------
+# Developer Account
+>**Note:**
+For application development, a developer account is not necessary. 
 
-# Documentation
-[API Reference  (openharmony.cn)](https://docs.openharmony.cn/pages/v4.0/en/application-dev/reference/apis/development-intro.md)    
-(check out all API Reference on the left sidebar)
-
-English documentation of Application Development   
-[Overview of ArkTS Common Library (openharmony.cn)](https://docs.openharmony.cn/pages/v4.0/en/application-dev/arkts-utils/arkts-commonlibrary-overview.md)  
-[en/application-dev/Readme-EN.md · OpenHarmony/docs \- Gitee.com](https://gitee.com/openharmony/docs/blob/master/en/application-dev/Readme-EN.md)
-
-More info on [Gitee repository of  OpenHarmony](https://gitee.com/openharmony) 
-
-<div style="margin-top: 50px;"></div>
-
-# Developer Account  
 Introduction of Register and Identify Verification:  
-[HUAWEI ID Registration-Registration and Verification | HUAWEI Developers](https://developer.huawei.com/consumer/en/doc/start/registration-and-verification-0000001053628148)
+[HUAWEI ID Registration and Verification | HUAWEI Developers](https://developer.huawei.com/consumer/en/doc/start/registration-and-verification-0000001053628148)
 
 In simple terms, anyone can register for an individual developer account, whether they choose to verify their identity or not.  However, it's said that certain permissions require an identity verification with the identity document. 
 
@@ -216,17 +204,9 @@ Enterprise developers receive a broader range of services compared to individual
 * Individual Developers: App Market, Themes, Product Management, Account, PUSH, New Game Pre-order, Interactive Comments, Social, HUAWEI HiAI, Watch App Market, etc.  
 
 * Enterprise Developers: App Market, Themes, Initial Release, Payment, Game Packages, App Market Promotion, Product Management, Games, Account, PUSH, New Game Pre-order, Interactive Comments, Social, HUAWEI HiAI, Watch App Market, Sports & Health, Cloud Testing, Smart Home, etc.
-
-For application development, a developer account is not necessary.   
-For testing and debugging,If you want to debug with the development board, it is necessary to generate a signature for the project. You need first sign in your  HUAWEI Developers for generating one.
-![alt text](../Images/Application-Development-Guide/environment_setup/SDK-5.png)  
-  
-![alt text](../Images/Application-Development-Guide/environment_setup/SDK-6.png)    
-
 <div style="margin-top: 50px;"></div> 
 
-
-# OHPM
+# Introduction to OHPM
 
 OHPM (OpenHarmony Package Manager) is a package management system designed for OpenHarmony, providing access to third-party libraries and tools that enhance development efficiency and functionality within the OpenHarmony ecosystem. (Think of it as NPM in openharmony)
 
@@ -239,32 +219,14 @@ Some examples of library：
 3. **mars**: A cross-platform network component library that provides solutions for long and short network connections.  
 4. **httpclient**: An efficient HTTP client for OpenHarmony that supports various protocols and optimizes network transmission.
 
-<div style="margin-top: 50px;"></div>
+<div style="margin-top: 50px;"></div> 
 
-# Issues and Solutions
+# Common Issues and Solutions
 
 ## Installation Failure After Project Creation
 
 ![alt text](../Images/Application-Development-Guide/environment_setup/SDK-7.png)  
 There are a bunch of solutions on the forum but I simply tried switching the intranet to Internet.
-
-## SDK Download Failed
-
-During the build process, an error message indicating "SDK download failed" may appear. However, the Toolchain in the error message does not exist in SDK manager.  
-   ![alt text](../Images/Application-Development-Guide/environment_setup/SDK-8.png)  
-
-The reason is likely that you are not in China. (This is weird though.)  
-Try navigating to the path on Windows  
-*C:\\Users\\username\\AppData\\Roaming\\Huawei\\DevEcoStudio3.0\\options*   
-(on MacOS it's   
-*/Users/username/Library/Application Support/Huawei/DevEcoStudio3.0/options*), open country.region.xml, and modify *countryregion* name to 'CN'
-
-![alt text](../Images/Application-Development-Guide/environment_setup/SDK-9.png)  
-
-
-After saving your changes, SDK 3.2 should be loaded in SDK Manager. Proceed to download all selected SDKs for API9. Click "Apply" to confirm the selection. Agree to all license agreements and download the selected SDKs. Once the download is complete, click "Finish". Afterward, rebuild the project. You should see a successful compilation.
-
-![alt text](../Images/Application-Development-Guide/environment_setup/SDK-10.png)  
 
 ## Cannot find the emulator of a phone device
 

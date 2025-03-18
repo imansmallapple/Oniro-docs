@@ -22,7 +22,7 @@ By following this documentation, you'll learned:
 ## Development Environment  
 To start developing OpenHarmony applications, we first need to set up the development environment by installing `DevEco Studio`.  
 
-To set up your development environment, please refer to  [Environment Setup Guide](/application-development/environment-setup-config.md). **To be added**
+To set up your development environment, please refer to  [Environment Setup Guide](/application-development/environment-setup-config.md).
 
 ## Learning Path
 **To be added**
