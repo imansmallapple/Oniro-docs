@@ -5,6 +5,8 @@ Text from (https://github.com/frankplus/oh-app-development-docs/blob/master/Chap
 This guide aims to help developer set up their own development environment.
 
 **Content Table:**  
+[System Requirement](#system-requirement)  
+
 [IDE Installation](#ide-installation)  
    - [Get Package](#get-package)  
    - [Step by Step Installation](#step-by-step-installation)  
@@ -18,6 +20,17 @@ This guide aims to help developer set up their own development environment.
 [Introduction to OHPM](#introduction-to-ohpm)  
 
 [Common Issues and Solutions](#common-issues-and-solutions)  
+
+# System Requirement  
+For this tutorial, we use Windows system as example, it is recommended to meet the following requirements:
+
+Operating system: Windows 10 64-bit
+
+Memory: at least 8 GB
+
+Hard disk: at least 100 GB
+
+Resolution: at least 1280 x 800 pixels
 
 # IDE Installation  
 We are using **DevEco Studio** as the IDE  

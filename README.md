@@ -6,7 +6,7 @@ before go throught the docs, please have a brief look [here](/current-action-sum
 
 [Operating System Architecture](/operating-system-architecture/operating-system-architecture.md)
 
-Application Development Guide  
+[Application Development Guide](/application-development/index.md)  
 - Welcome/(Development Overview)
     - What is this docs about?
 
