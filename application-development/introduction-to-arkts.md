@@ -12,7 +12,7 @@
 - [Event Binding](#event-binding)  
 - [Rendering Control](#rendering-control)  
 
-[ArkTS Basics](/application-development/arkts-basics/index.md)  
+[ArkTS Basics](/application-development/arkts-basics.md)  
 
 [Start Sample: Controlling Fan]()  
 
