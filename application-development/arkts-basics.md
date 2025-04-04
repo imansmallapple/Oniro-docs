@@ -43,7 +43,7 @@
 - [Function Scope](#function-scope)  
 - [Function Calls](#function-calls)  
 
-[Functio Types](#function-types)  
+[Function Types](#function-types)  
 - [Arrow Functions(Lambdas Functions)](#arrow-functions-lambdas-functions)  
 - [Closure](#closure)  
 - [Function Overload Signature](#function-overload-signatures)  
